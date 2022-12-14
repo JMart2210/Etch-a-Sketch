@@ -1,8 +1,12 @@
 const board = document.querySelector('.board');
 const input = document.querySelector('.size');
 
-input.addEventListener('change', () => {
-    const userInput = input.value;
+createGrid(16);
+
+input.addEventListener('click', () => {
+    let userInput = 0; 
+    // ensures userInput is between 1 and 100
+    while (userInput < 1 || userInput > 100) userInput = prompt("Enter grid size (1-100)");
     //removes all the squares from the previous grid
     while (board.firstChild) board.removeChild(board.firstChild); 
     createGrid(userInput);
@@ -24,7 +28,7 @@ for (let rows = 0; rows < userInput; rows++)
     }
 }
 
-//checks if 
+//If mouse button is held down while moving over grid, it darkens the square
 function mouseMove(e) {
     if (e.buttons == 1) darkenSquare(e);
 }
