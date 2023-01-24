@@ -1,27 +1,27 @@
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .board {
-    height: 660px;
-    width: 660px;
-    display: flex;
-    flex: 1;
-    border: 1px solid;
+  height: 660px;
+  width: 660px;
+  display: flex;
+  flex: 1;
+  border: 1px solid;
 }
 
 button {
-    width: auto;
-    margin: 25px;
+  width: auto;
+  margin: 25px;
 }
 .board > div {
-    flex: 1;
+  flex: 1;
 }
 
 .square {
-    aspect-ratio: 1 / 1;
-    border: 1px solid;
+  aspect-ratio: 1 / 1;
+  border: 1px solid;
 }
